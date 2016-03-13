@@ -4,36 +4,227 @@
   .product-detail__photos
     = image_tag 'https://s3.amazonaws.com/senko-product-images/1s5nrzlgIHx_6z2gT3leokyX8nENi1LsYNYFvWNARbc/600x600'
     = image_tag 'https://s3.amazonaws.com/senko-product-images/Bn2DQVrh7ld2WyIhXmsgTlkdM6PJ4CF2aN0eT4xepN0/600x600'
-  #sticky-anchor
   .product-detail__details
     %h2 Marin Rift Zone Pro Carbon
     %p The Cream of the Crop-The Rift Zone Pro Carbon leads the Rift Zone family with ultra-light and stiff component selection all wrapped together with Marin's all new IsoTrac suspension platform designed with 29er Trail specific geometry. With a complete Shimano XTR 1x11 drivetrain, shifters, brakes and hubs, Fox's 34 Float Factory fork, custom-tuned BOS Micro shock and WTB Ci24 carbon rims, the Rift Zone 9 allows you to ride faster than you thought possible.
-    %h5 Features
-    %ul
-      %li
-        %strong Trail 29 IsoTrac C
-        Enhanced monocoque carbon frame construction & IsoTrac suspension platform with custom-tuned shock, 110mm rear wheel travel
-      %li
-        %strong Trail 29 IsoTrac C 2
-        Utilizing flexing stays, IsoTrac eliminates the need for a rear pivot, reducing weight and enhancing ride characteristics
-      %li
-        %strong 4 in 1
-        4 In 1 internal cable routing for a clean look and cable protection
-      %li
-        %strong Chainstay Disc/E-thru Axle
-        Inner chainstay disc mount protects caliper and Shimano E-Thru 142x12mm axle increases torsional rigidity
+    .product-detail__options
+      %form
+        %select
+          %option S
+          %option M
+          %option L
+          %option XL
+        %input{type: 'submit', value: 'Add to Cart'}
+    .tabs
+      .tabs__nav
+        .tabs__nav__link.current{'data-tab' => 'tab-1'} Features
+        .tabs__nav__link{'data-tab' => 'tab-2'} Components
+        .tabs__nav__link{'data-tab' => 'tab-3'} Geometry
+      .tabs__content
+        #tab-1.tabs__content__info.current
+          %ul
+            %li
+              %strong Trail 29 IsoTrac C
+              Enhanced monocoque carbon frame construction & IsoTrac suspension platform with custom-tuned shock, 110mm rear wheel travel
+            %li
+              %strong Trail 29 IsoTrac C 2
+              Utilizing flexing stays, IsoTrac eliminates the need for a rear pivot, reducing weight and enhancing ride characteristics
+            %li
+              %strong 4 in 1
+              4 In 1 internal cable routing for a clean look and cable protection
+            %li
+              %strong Chainstay Disc/E-thru Axle
+              Inner chainstay disc mount protects caliper and Shimano E-Thru 142x12mm axle increases torsional rigidity
+        #tab-2.tabs__content__info
+          %dl
+            %dt Frame
+            %dd Carbon Frame and Swingarm, 29” Wheels, 110mm Travel IsoTrac Suspension Platform
+          %dl
+            %dt Weight
+            %dd 26.35 lb/11.95 kg (published bike weight is based on a size Medium frame)
+          %dl
+            %dt Front Fork
+            %dd Fox 34 Float Factory 29” w/ Kashima, 3-Position Adjust, 120mm Travel
+          %dl
+            %dt Rear Suspension
+            %dd BOS Micro, 165x38mm Stroke, Remote Lockout
+          %dl
+            %dt Crankset
+            %dd Shimano XTR Hollowtech II, 32T
+          %dl
+            %dt Derailleur Rear
+            %dd Shimano XTR Shadow Plus
+          %dl
+            %dt Shift Lever
+            %dd Shimano XTR 1x11-Speed
+          %dl
+            %dt Cassette
+            %dd Shimano XTR 11-Speed, 11-40T
+          %dl
+            %dt Bottom Bracket
+            %dd Shimano Hollowtech II
+          %dl
+            %dt Chain
+            %dd Shimano HG700
+          %dl
+            %dt Hub Rear
+            %dd Shimano XTR, 142x12mm, Centerlock Disc, 32H
+          %dl
+            %dt Hub Front
+            %dd Shimano XTR, 100x15mm, Centerlock Disc, 32H
+          %dl
+            %dt Rim
+            %dd WTB Ci24 Carbon, 24mm Inner, Tubeless Ready
+          %dl
+            %dt Spokes Nipples
+            %dd DT Swiss
+          %dl
+            %dt Tires
+            %dd Front WTB Trail Boss, 29x2.25” Rear: WTB Nineline, 29x2.25”, Folding, Tubeless Ready
+          %dl
+            %dt Brakes Front
+            %dd Shimano XTR Trail Hydraulic Disc, 180mm Centerlock Rotor
+          %dl
+            %dt Brakes Back
+            %dd Shimano XTR Trail Hydraulic Disc, 160mm Centerlock Rotor
+          %dl
+            %dt Brakes Levers
+            %dd Shimano XTR Trail Hydraulic
+          %dl
+            %dt Handlebar
+            %dd RaceFace Next Carbon Riser, 20mm Rise, 720mm Width
+          %dl
+            %dt Grips
+            %dd Marin Locking
+          %dl
+            %dt Stem
+            %dd RaceFace Turbine 3D Forged Alloy
+          %dl
+            %dt Headset
+            %dd FSA Orbit, Sealed Cartridge Bearing, 1 1/8
+          %dl
+            %dt Seatpost
+            %dd RockShox Reverb Dropper Post, Internal Routing
+          %dl
+            %dt Saddle
+            %dd WTB SL8 Team, Carbon Rails
+        #tab-3.tabs__content__info
+          %table
+            %thead
+              %tr
+                %th Sizes
+                %th S
+                %th M
+                %th L
+                %th XL
+            %tbody
+              %tr
+                %td Stack
+                %td 615.46
+                %td 615.46
+                %td 624.83
+                %td 643.59
+              %tr
+                %td Reach
+                %td 418.52
+                %td 438.52
+                %td 455.83
+                %td 465.46
+              %tr
+                %td Head Tube Angle
+                %td 69.65
+                %td 69.65
+                %td 69.65
+                %td 69.65
+              %tr
+                %td Head Tube Length (mm)
+                %td 110
+                %td 110
+                %td 120
+                %td 140
+              %tr
+                %td Seat Tube Angle
+                %td 66
+                %td 66
+                %td 66
+                %td 66
+              %tr
+                %td Seat Tube Angle Virtual
+                %td 74
+                %td 74
+                %td 74
+                %td 74
+              %tr
+                %td Seat Tube Actual
+                %td 405
+                %td 432
+                %td 483
+                %td 533
+              %tr
+                %td Top Tube Actual (mm)
+                %td 542.5
+                %td 560.2
+                %td 574.9
+                %td 591.2
+              %tr
+                %td Top Tube Effective (mm)
+                %td 595
+                %td 615
+                %td 635
+                %td 650
+              %tr
+                %td BB Height
+                %td 333
+                %td 333
+                %td 333
+                %td 333
+              %tr
+                %td BB Drop
+                %td 38
+                %td 38
+                %td 38
+                %td 38
+              %tr
+                %td Fork Offset
+                %td 51
+                %td 51
+                %td 51
+                %td 51
+              %tr
+                %td Stand Over Height
+                %td 691.52
+                %td 702.4
+                %td 725.84
+                %td 763.83
+              %tr
+                %td Wheel Base
+                %td 1125.4
+                %td 1145.4
+                %td 1166.2
+                %td 1182.8
+              %tr
+                %td Chain Stay (mm)
+                %td 440
+                %td 440
+                %td 440
+                %td 440
+              %tr
+                %td Seat Post (mm)
+                %td 30.9
+                %td 30.9
+                %td 30.9
+                %td 30.9
 
 :javascript
-  function sticky_relocate() {
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top;
-    if (window_top > div_top) {
-        $('.product-detail__details').addClass('product-detail__details--sticky');
-    } else {
-        $('.product-detail__details').removeClass('product-detail__details--sticky');
-    }
-  }
-  $(function () {
-      $(window).scroll(sticky_relocate);
-      sticky_relocate();
-  });
+  // Tabs
+  $(document).ready(function(){
+  	$('.tabs__nav__link').click(function(){
+  		var tab_id = $(this).attr('data-tab');
+
+  		$('.tabs__nav__link').removeClass('current');
+  		$('.tabs__content__info').removeClass('current');
+
+  		$(this).addClass('current');
+  		$("#"+tab_id).addClass('current');
+  	})
+  })
