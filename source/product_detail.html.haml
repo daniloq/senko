@@ -1,0 +1,39 @@
+= partial 'refills/nav'
+= partial 'refills/breadcrumbs'
+.product-detail
+  .product-detail__photos
+    = image_tag 'https://s3.amazonaws.com/senko-product-images/1s5nrzlgIHx_6z2gT3leokyX8nENi1LsYNYFvWNARbc/600x600'
+    = image_tag 'https://s3.amazonaws.com/senko-product-images/Bn2DQVrh7ld2WyIhXmsgTlkdM6PJ4CF2aN0eT4xepN0/600x600'
+  #sticky-anchor
+  .product-detail__details
+    %h2 Marin Rift Zone Pro Carbon
+    %p The Cream of the Crop-The Rift Zone Pro Carbon leads the Rift Zone family with ultra-light and stiff component selection all wrapped together with Marin's all new IsoTrac suspension platform designed with 29er Trail specific geometry. With a complete Shimano XTR 1x11 drivetrain, shifters, brakes and hubs, Fox's 34 Float Factory fork, custom-tuned BOS Micro shock and WTB Ci24 carbon rims, the Rift Zone 9 allows you to ride faster than you thought possible.
+    %h5 Features
+    %ul
+      %li
+        %strong Trail 29 IsoTrac C
+        Enhanced monocoque carbon frame construction & IsoTrac suspension platform with custom-tuned shock, 110mm rear wheel travel
+      %li
+        %strong Trail 29 IsoTrac C 2
+        Utilizing flexing stays, IsoTrac eliminates the need for a rear pivot, reducing weight and enhancing ride characteristics
+      %li
+        %strong 4 in 1
+        4 In 1 internal cable routing for a clean look and cable protection
+      %li
+        %strong Chainstay Disc/E-thru Axle
+        Inner chainstay disc mount protects caliper and Shimano E-Thru 142x12mm axle increases torsional rigidity
+
+:javascript
+  function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top) {
+        $('.product-detail__details').addClass('product-detail__details--sticky');
+    } else {
+        $('.product-detail__details').removeClass('product-detail__details--sticky');
+    }
+  }
+  $(function () {
+      $(window).scroll(sticky_relocate);
+      sticky_relocate();
+  });

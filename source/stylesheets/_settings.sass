@@ -1,0 +1,38 @@
+// Variables
+$primary-color: #71C7C4
+$secondary-color: #c63b3f
+$darkgray: #303841
+$gray: #47555E
+
+// Mixins
+=wrapper
+  @extend .container
+
+=transition ($str)
+  -webkit-transition: ($str)
+  -moz-transition: ($str)
+  transition: ($str)
+
+// Global
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  outline: none
+  box-sizing: border-box
+  letter-spacing: 1px
+
+body
+  color: $gray
+  font:
+    size: 16px
+    family: 'Oxygen', sans-serif
+    weight: 300
+
+a
+  color: $primary-color
+  font-weight: 400
+  +transition(all 0.3s)
+  &:hover
+    color: $secondary-color
+    text-decoration: none
+    font-weight: 700

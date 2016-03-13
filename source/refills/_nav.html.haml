@@ -1,0 +1,24 @@
+%nav.main-nav
+  .main-nav__cart
+    %span (0)
+    %span $0.00
+  %article
+    .main-nav__info
+      %strong 904-619-0496
+      %br
+      884 Stockton St.
+      %br
+      Jacksonville, FL 32204
+    %header
+      .main-nav__logo
+        = image_tag 'images/zencog-logo.png'
+    .main-nav__content
+      = link_to 'About', '#', class: 'main-nav__item'
+      = link_to 'Sales', '#', class: 'main-nav__item'
+      = link_to 'Services', '#', class: 'main-nav__item'
+      = link_to 'Community', '#', class: 'main-nav__item'
+      = link_to 'Blog', '#', class: 'main-nav__item'
+      = link_to 'Info', '#', class: 'main-nav__item'
+    .main-nav__search
+      = link_to '' do
+        %i.ion-search
