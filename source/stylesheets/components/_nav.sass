@@ -1,7 +1,8 @@
 .main-nav
-  min-height: 147px
+  +rem('min-height', 147px)
+  +rem('padding', 20px 0 0 0)
+  +rem('font-size', 18px)
   background-color: $primary-color
-  padding: 20px 0 0 0
   position: relative
   +clearfix
   a
@@ -12,28 +13,28 @@
   header
     position: relative
   .main-nav__info
+    +rem('top', 20px)
+    +rem('left', 20px)
     position: absolute
-    top: 20px
-    left: 20px
     color: white
   .main-nav__logo
-    width: 120px
+    +rem('width', 120px)
     margin: 0 auto
     img
-      width: 120px
+      +rem('width', 120px)
   .main-nav__content
+    +rem('padding', 20px 0)
     text-align: center
-    padding: 20px 0
   .main-nav__item
-    margin: 0 40px
+    +rem('margin', 0 40px)
   .main-nav__cart
+    +rem('top', 20px)
+    +rem('right', 20px)
     position: absolute
-    top: 20px
-    right: 20px
     color: white
     font:
       weight: 700
   .main-nav__search
+    +rem('bottom', 20px)
+    +rem('right', 20px)
     position: absolute
-    bottom: 20px
-    right: 20px

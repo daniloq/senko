@@ -1,10 +1,46 @@
+.tabs__nav
+  +rem('font-size', 0px)
+  +rem('margin', 15px 0 0 0)
+  z-index: 1
+
 .tabs__nav__link
+  +rem('border-bottom', 1px solid white)
+  +rem('padding', 0 30px)
+  +rem('height', 50px)
+  +rem('line-height', 50px)
+  +rem('margin', 0px)
+  +rem('font-size', 14px)
+  +transition(all 0.3s)
+  text-transform: uppercase
+  font:
+    weight: 700
   display: inline-block
   color: $primary-color
+  &:hover
+    color: $darkgray
+    cursor: pointer
   &.current
     color: $darkgray
+    +rem('border-top', 1px solid $lightgray)
+    +rem('border-left', 1px solid $lightgray)
+    +rem('border-right', 1px solid $lightgray)
+    &:hover
+      color: $darkgray
+      cursor: default
+
+.tabs__content
+  +rem('margin-top', -2px)
+  +rem('border-top', 1px solid $lightgray)
+  +rem('padding', 20px)
+  z-index: 0
+
 .tabs__content__info
+  +rem('padding', 15px)
   display: none
-  padding: 15px
   &.current
     display: inherit
+  dl
+    +rem('margin', 0 0 15px 0)
+  dt, td:first-of-type
+    font:
+      weight: 700

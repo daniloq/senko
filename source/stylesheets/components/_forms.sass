@@ -1,0 +1,24 @@
+input, select
+  width: 100%
+
+input[type='submit']
+  @extend .button
+  +rem('margin', 15px 0 30px 0)
+
+select
+  +rem('text-indent', 0.01px)
+  +rem('padding', 12px 28px 12px 15px)
+  +rem('border', 1px solid #cccccc)
+  +border-radius(0)
+  -webkit-appearance: none
+  text-overflow: ''
+  cursor: pointer
+  width: 100%
+
+.form-select
+  +rem('margin', 15px 0 30px 0)
+  position: relative
+  i
+    +rem('right', 10px)
+    +rem('top', 13px)
+    position: absolute

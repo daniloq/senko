@@ -2,7 +2,10 @@
 $primary-color: #71C7C4
 $secondary-color: #c63b3f
 $darkgray: #303841
+$lightgray: #cccccc
 $gray: #47555E
+
+$baseline-px: 16px
 
 // Mixins
 =wrapper
@@ -13,6 +16,20 @@ $gray: #47555E
   -moz-transition: ($str)
   transition: ($str)
 
+=rem($property, $px-values)
+  $baseline-rem: $baseline-px / 1rem
+  #{$property}: $px-values
+  @if type-of($px-values) == "number"
+    #{$property}: $px-values / $baseline-rem
+  @else
+    $rem-values: ()
+    @each $value in $px-values
+      @if $value == 0 or type-of( $value ) != "number"
+        $rem-values: append($rem-values, $value)
+      @else
+        $rem-values: append($rem-values, $value / $baseline-rem)
+    #{$property}: $rem-values
+
 =clearfix
   *zoom: 1
   &:before, &:after
@@ -21,26 +38,34 @@ $gray: #47555E
   &:after
     clear: both
 
+=border-radius ($str)
+  -webkit-border-radius: ($str)
+  -moz-border-radius: ($str)
+  -ms-border-radius: ($str)
+  -o-border-radius: ($str)
+  border-radius: ($str)
+
 // Global
 *
+  +rem('letter-spacing', 1px)
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   outline: none
   box-sizing: border-box
-  letter-spacing: 1px
 
 body
+  +rem('font-size', 16px)
+  +rem('line-height', 26px)
   color: $gray
   font:
-    size: 16px
     family: 'Oxygen', sans-serif
     weight: 300
 
 a
+  +transition(all 0.3s)
   color: $primary-color
   font-weight: 400
   text-decoration: none
-  +transition(all 0.3s)
   &:hover
     color: $secondary-color
     text-decoration: none

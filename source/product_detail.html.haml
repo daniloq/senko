@@ -9,11 +9,20 @@
     %p The Cream of the Crop-The Rift Zone Pro Carbon leads the Rift Zone family with ultra-light and stiff component selection all wrapped together with Marin's all new IsoTrac suspension platform designed with 29er Trail specific geometry. With a complete Shimano XTR 1x11 drivetrain, shifters, brakes and hubs, Fox's 34 Float Factory fork, custom-tuned BOS Micro shock and WTB Ci24 carbon rims, the Rift Zone 9 allows you to ride faster than you thought possible.
     .product-detail__options
       %form
-        %select
-          %option S
-          %option M
-          %option L
-          %option XL
+        %h5 Size
+        .form-select
+          %select
+            %option S
+            %option M
+            %option L
+            %option XL
+          %i.ion-chevron-down
+        %h5 Color
+        .form-select
+          %select
+            %option White
+            %option Black
+          %i.ion-chevron-down
         %input{type: 'submit', value: 'Add to Cart'}
     .tabs
       .tabs__nav
@@ -112,7 +121,7 @@
           %table
             %thead
               %tr
-                %th Sizes
+                %th 
                 %th S
                 %th M
                 %th L

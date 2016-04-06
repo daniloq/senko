@@ -1,6 +1,27 @@
 h1, h2, h3, h4, h5
   color: $darkgray
+  margin: 0
+
+h2
+  +rem('font-size', 24px)
+  +rem('lin-height', 34px)
 
 h5
+  +rem('font-size', 14px)
+  +rem('lin-height', 24px)
   font:
     weight: 700
+
+ul, dl, ul > li, dl > dd
+  margin: 0
+  padding: 0
+
+ul > li
+  +rem('margin', 0 0 15px 0)
+
+table
+  margin: 0
+  padding: 0
+  th, td
+    +rem('padding', 10px)
+    +rem('border-bottom', 1px solid $lightgray)
