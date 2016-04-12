@@ -1,0 +1,39 @@
+.browse__container
+  +rem('padding', 30px 75px)
+  +flex
+  justify-content: space-between
+
+.browse__sidebar
+  +rem('border', 1px solid $lightgray)
+  +rem('min-width', 300px)
+  +rem('margin', 0 60px 0 0)
+  +rem('padding', 20px)
+  a
+    display: block
+    color: $gray
+    font-weight: 300
+    &:hover
+      color: $primary-color
+
+.browse__content__featured
+  +rem('height', 250px)
+  +rem('margin', 0 0 20px 0)
+  background: $gray
+  width: 100%
+
+.browse__content__item
+  +rem('width', 250px)
+  +rem('height', 250px)
+  // width: percentage(1/4)
+  // height: auto
+  margin: 0
+  font-size: 0
+  padding: 0
+  display: inline-block
+  background: $lightgray
+
+.browse__sidebar__item__submenu
+  // display: none
+  +rem('margin', 0 0 0 10px)
+  &.browse__sidebar__item__submenu--open
+    display: block

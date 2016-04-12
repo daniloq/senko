@@ -1,0 +1,26 @@
+= partial 'refills/nav'
+
+.browse__container
+  .browse__sidebar
+    -5.times do
+      .browse__sidebar__item
+        .browse__sidebar__item__heading
+          = link_to 'Item'
+          .browse__sidebar__item__submenu
+            -5.times do
+              %input{type: 'checkbox'} Submenu Item
+              %br
+
+  .browse__content
+    .browse__content__featured
+    -20.times do
+      .browse__content__item
+
+
+:javascript
+  // Submenu
+  $(document).ready(function(){
+  	$('.browse__sidebar__item__heading').click(function(){
+      $(this).closest('.browse__sidebar__item__submenu').addClass('browse__sidebar__item__submenu--open');
+    })
+  })
