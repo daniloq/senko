@@ -4,12 +4,11 @@
   .browse__sidebar
     -5.times do
       .browse__sidebar__item
-        .browse__sidebar__item__heading
-          = link_to 'Item'
-          .browse__sidebar__item__submenu
-            -5.times do
-              %input{type: 'checkbox'} Submenu Item
-              %br
+        = link_to 'Item'
+        .browse__sidebar__item__submenu
+          -5.times do
+            %input{type: 'checkbox'} Submenu Item
+            %br
 
   .browse__content
     .browse__content__featured
