@@ -8,32 +8,67 @@
   +rem('min-width', 300px)
   +rem('margin', 0 60px 0 0)
   +rem('padding', 20px)
-  a
-    display: block
-    color: $gray
-    font-weight: 300
-    &:hover
-      color: $primary-color
 
-.browse__content__featured
-  +rem('height', 250px)
-  +rem('margin', 0 0 20px 0)
-  background: $gray
-  width: 100%
-
-.browse__content__item
-  +rem('width', 250px)
-  +rem('height', 250px)
-  // width: percentage(1/4)
-  // height: auto
-  margin: 0
-  font-size: 0
-  padding: 0
-  display: inline-block
-  background: $lightgray
+.browse__sidebar__item
+  +rem('font-size', 18px)
+  display: block
+  color: $gray
+  font-weight: 700
+  outline: none
 
 .browse__sidebar__item__submenu
-  // display: none
-  +rem('margin', 0 0 0 10px)
-  &.browse__sidebar__item__submenu--open
-    display: block
+  +rem('margin', 0 0 20px 10px)
+
+.browse__content__header
+  +clearfix
+  +rem('margin', 0 0 10px 0)
+  div
+    +rem('font-size', 18px)
+    display: inline-block
+    font-weight: 700
+  span
+    float: right
+
+.browse__content__featured
+  +flex
+  +align-items(center)
+  +rem('height', 200px)
+  width: 100%
+
+.browse__content__featured__item
+  +rem('padding', 20px)
+  width: percentage(1/5)
+  background: $primary-color
+  color: white
+  text-align: center
+  &:not(:last-of-type)
+    +rem('margin', 0 20px 0 0)
+
+.browse__content__item
+  +rem('border', 1px solid $lightgray)
+  +rem('padding', 20px)
+  +rem('margin', 5px)
+  +clearfix
+  outline: none
+  display: inline-block
+  &:hover
+    border-color: $gray
+
+.browse__content__item--image
+  font-size: 0
+  // +rem('width', 250px)
+  width: 25vh
+  img
+    +rem('height', 250px)
+    width: auto
+
+.browse__content__item--description
+  div, p
+    margin: 0
+    padding: 0
+  div
+    font-weight: 700
+    color: $darkgray
+  p
+    color: $gray
+    font-weight: 300

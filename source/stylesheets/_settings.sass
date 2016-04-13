@@ -3,7 +3,7 @@ $primary-color: #71C7C4
 $secondary-color: #c63b3f
 $darkgray: #303841
 $lightgray: #cccccc
-$gray: #47555E
+$gray: darken(#889AA5, 10%)
 
 $baseline-px: 16px
 
@@ -16,6 +16,12 @@ $baseline-px: 16px
   display: -ms-flexbox
   display: -webkit-flex
   display: flex
+
+=align-items ($str)
+  -webkit-flex-align: ($str)
+  -ms-flex-align: ($str)
+  -webkit-align-items: ($str)
+  align-items: ($str)
 
 =transition ($str)
   -webkit-transition: ($str)
@@ -75,4 +81,3 @@ a
   &:hover
     color: $secondary-color
     text-decoration: none
-    font-weight: 700

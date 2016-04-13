@@ -1,25 +1,45 @@
 = partial 'refills/nav'
 
 .browse__container
+  -# Sidebar
   .browse__sidebar
     -5.times do
       .browse__sidebar__item
-        = link_to 'Item'
-        .browse__sidebar__item__submenu
-          -5.times do
-            %input{type: 'checkbox'} Submenu Item
-            %br
-
+        Item
+      .browse__sidebar__item__submenu
+        -5.times do
+          %input{type: 'checkbox'} Submenu Item
+          %br
+  -# Main Content
   .browse__content
-    .browse__content__featured
+    -# Pagination
+    .browse__content__header
+      %div 33 found
+      %span
+        Page 1 of 2 &#124;
+        = link_to 'Next'
+    -# Featured Items
+    -# .browse__content__featured
+    -#   %a.browse__content__featured__item
+    -#     BMX
+    -#     %span 33
+    -#   %a.browse__content__featured__item
+    -#     City
+    -#     %span 50
+    -#   %a.browse__content__featured__item
+    -#     Mountain
+    -#     %span 73
+    -#   %a.browse__content__featured__item
+    -#     Road
+    -#     %span 38
+    -#   %a.browse__content__featured__item
+    -#     Youth
+    -#     %span 17
+    -# Product Thumbnails
     -20.times do
-      .browse__content__item
-
-
-:javascript
-  // Submenu
-  $(document).ready(function(){
-  	$('.browse__sidebar__item__heading').click(function(){
-      $(this).closest('.browse__sidebar__item__submenu').addClass('browse__sidebar__item__submenu--open');
-    })
-  })
+      %a.browse__content__item{href: '#'}
+        .browse__content__item--image
+          = image_tag 'https://s3.amazonaws.com/senko-product-images/QdKhRPhRxAkWpsYXndppzof-4uK9s28StupZIwcwR04/600x600'
+        .browse__content__item--description
+          %div Redline Flight Pro
+          %p $1,499,99
